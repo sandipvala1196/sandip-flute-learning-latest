@@ -13,7 +13,6 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -40,7 +39,7 @@ jobs:
         run: flutter pub get
 
       - name: Analyze Flutter code
-       run: flutter analyze lib
+        run: flutter analyze lib
 
       - name: Build release APK
         run: flutter build apk --release
